@@ -3,6 +3,11 @@
   "displayName": "全角半角変換",
   "description": "テキストファイルの全角文字⇔半角文字を設定に基づいて変換するCursor拡張機能",
   "version": "1.0.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/moriyakeiichi/zenhan-converter.git"
+  },
   "engines": {
     "vscode": "^1.85.0"
   },
