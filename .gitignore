@@ -1,5 +1,7 @@
 node_modules/
 out/
+.DS_Store
+**/.DS_Store
 仕様.txt
 仕様2.txt
 test_sample.txt
