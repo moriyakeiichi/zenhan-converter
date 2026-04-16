@@ -12,6 +12,21 @@
 
 ### インストール
 
+#### VSIX ファイルからインストール（推奨）
+
+1. [Releases](https://github.com/moriyakeiichi/zenhan-converter) ページ、またはリポジトリのルートから `zenhan-converter-x.x.x.vsix` をダウンロードします。
+2. Cursor / VS Code を開き、次のいずれかの方法でインストールします。
+   - **コマンドパレット**（`Cmd+Shift+P` / `Ctrl+Shift+P`）→ `Extensions: Install from VSIX...` を選択 → ダウンロードした `.vsix` ファイルを指定
+   - **ターミナル**から:
+
+     ```bash
+     code --install-extension zenhan-converter-1.0.0.vsix
+     ```
+
+3. インストール後、エディターを再読み込みすると使えるようになります。
+
+#### ソースからビルドする場合（開発者向け）
+
 1. このリポジトリをクローンします。
 2. ルートディレクトリで依存関係をインストールします。
 
