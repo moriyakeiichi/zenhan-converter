@@ -59,37 +59,37 @@
 
 設定は `zenhanConverter.*` というキー名で、拡張機能の設定画面から変更できます（`settings.json` でも編集可）。主な項目は次の通りです。
 
-- `zenhanConverter.alphabet`: アルファベット（A–Z, a–z）
-- `zenhanConverter.number`: 数字（アラビア数字 0–9）
-- `zenhanConverter.space`: スペース（全角スペース / 半角スペース）
-- `zenhanConverter.exclamation`: 感嘆符（！）
-- `zenhanConverter.question`: 疑問符（？）
-- `zenhanConverter.kuten`: 句点（。）、読点（、）  
+- `zenhanConverter.01Alphabet`: アルファベット（A–Z, a–z）
+- `zenhanConverter.02Number`: 数字（アラビア数字 0–9）
+- `zenhanConverter.03Brackets`: カッコ類（（）［］｛｝「」）
+- `zenhanConverter.04Exclamation`: 感嘆符（！）
+- `zenhanConverter.05Question`: 疑問符（？）
+- `zenhanConverter.06Operators`: 演算子（＋、＝、＜、＞）
+- `zenhanConverter.07At`: アットマーク（@）
+- `zenhanConverter.08Colon`: コロン（:）
+- `zenhanConverter.09Semicolon`: セミコロン（;）
+- `zenhanConverter.10Percent`: パーセント（%）
+- `zenhanConverter.11Kuten`: 句点（。）、読点（、）  
   - 半角に変換する場合は **JIS X 0201 の半角句読点（｡ / ､）** を使用します。
-- `zenhanConverter.yen`: 円マーク（￥）  
+- `zenhanConverter.12Space`: スペース（全角スペース / 半角スペース）
+- `zenhanConverter.13Yen`: 円マーク（￥）  
   - 全角: U+FFE5, 半角: U+00A5
-- `zenhanConverter.tilde`: チルダ（~）
-- `zenhanConverter.periodComma`: ピリオド（．）、コンマ（，）
-- `zenhanConverter.hyphen`: ハイフン（-）
-- `zenhanConverter.underscore`: アンダースコア（_）
-- `zenhanConverter.backslash`: バックスラッシュ（\）  
+- `zenhanConverter.14Tilde`: チルダ（~）
+- `zenhanConverter.15Hyphen`: ハイフン（-）
+- `zenhanConverter.16Underscore`: アンダースコア（_）
+- `zenhanConverter.17Backslash`: バックスラッシュ（\）  
   - 全角: U+FF3C, 半角: U+005C
-- `zenhanConverter.slash`: フォワードスラッシュ（/）
-- `zenhanConverter.colon`: コロン（:）
-- `zenhanConverter.semicolon`: セミコロン（;）
-- `zenhanConverter.brackets`: カッコ類（（）［］｛｝「」）
-- `zenhanConverter.operators`: 演算子（＋、＝、＜、＞）
-- `zenhanConverter.at`: アットマーク（@）
-- `zenhanConverter.percent`: パーセント（%）
-- `zenhanConverter.ampersand`: アンパサンド（&）
-- `zenhanConverter.asterisk`: アスタリスク（*）
-- `zenhanConverter.dollar`: ドル記号（$）
-- `zenhanConverter.hash`: シャープ（#）
-- `zenhanConverter.singleQuote`: シングルクォーテーション（'）
-- `zenhanConverter.doubleQuote`: ダブルクォーテーション（"）
-- `zenhanConverter.pipe`: パイプ（|）
-- `zenhanConverter.backquote`: バッククォート（`）
-- `zenhanConverter.caret`: ハット（^）
+- `zenhanConverter.18Slash`: フォワードスラッシュ（/）
+- `zenhanConverter.19Ampersand`: アンパサンド（&）
+- `zenhanConverter.20Asterisk`: アスタリスク（*）
+- `zenhanConverter.21Dollar`: ドル記号（$）
+- `zenhanConverter.22Hash`: シャープ（#）
+- `zenhanConverter.23SingleQuote`: シングルクォーテーション（'）
+- `zenhanConverter.24DoubleQuote`: ダブルクォーテーション（"）
+- `zenhanConverter.25PeriodComma`: ピリオド（．）、コンマ（，）
+- `zenhanConverter.26Pipe`: パイプ（|）
+- `zenhanConverter.27Backquote`: バッククォート（`）
+- `zenhanConverter.28Caret`: ハット（^）
 
 #### デフォルト設定
 

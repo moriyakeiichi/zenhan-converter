@@ -41,169 +41,169 @@
     "configuration": {
       "title": "全角半角変換",
       "properties": {
-        "zenhanConverter.alphabet": {
+        "zenhanConverter.01Alphabet": {
           "type": "string",
           "default": "半角",
           "enum": ["そのまま", "全角", "半角"],
           "description": "アルファベットの変換方法"
         },
-        "zenhanConverter.number": {
+        "zenhanConverter.02Number": {
           "type": "string",
           "default": "半角",
           "enum": ["そのまま", "全角", "半角"],
           "description": "数字（アラビア数字）の変換方法"
         },
-        "zenhanConverter.space": {
-          "type": "string",
-          "default": "そのまま",
-          "enum": ["そのまま", "全角", "半角"],
-          "description": "スペースの変換方法"
-        },
-        "zenhanConverter.exclamation": {
-          "type": "string",
-          "default": "そのまま",
-          "enum": ["そのまま", "全角", "半角"],
-          "description": "感嘆符（！）の変換方法"
-        },
-        "zenhanConverter.question": {
-          "type": "string",
-          "default": "そのまま",
-          "enum": ["そのまま", "全角", "半角"],
-          "description": "疑問符（？）の変換方法"
-        },
-        "zenhanConverter.kuten": {
-          "type": "string",
-          "default": "そのまま",
-          "enum": ["そのまま", "全角", "半角"],
-          "description": "句点（。）・読点（、）の変換方法（半角はJIS X 0201）"
-        },
-        "zenhanConverter.yen": {
-          "type": "string",
-          "default": "そのまま",
-          "enum": ["そのまま", "全角", "半角"],
-          "description": "円マーク（￥）の変換方法（全角:U+FFE5 / 半角:U+00A5）"
-        },
-        "zenhanConverter.tilde": {
-          "type": "string",
-          "default": "そのまま",
-          "enum": ["そのまま", "全角", "半角"],
-          "description": "チルダ（~）の変換方法"
-        },
-        "zenhanConverter.periodComma": {
-          "type": "string",
-          "default": "そのまま",
-          "enum": ["そのまま", "全角", "半角"],
-          "description": "ピリオド（．）・コンマ（，）の変換方法"
-        },
-        "zenhanConverter.hyphen": {
-          "type": "string",
-          "default": "そのまま",
-          "enum": ["そのまま", "全角", "半角"],
-          "description": "ハイフン（-）の変換方法"
-        },
-        "zenhanConverter.underscore": {
-          "type": "string",
-          "default": "そのまま",
-          "enum": ["そのまま", "全角", "半角"],
-          "description": "アンダースコア（_）の変換方法"
-        },
-        "zenhanConverter.backslash": {
-          "type": "string",
-          "default": "そのまま",
-          "enum": ["そのまま", "全角", "半角"],
-          "description": "バックスラッシュ（\\）の変換方法（全角:U+FF3C / 半角:U+005C）"
-        },
-        "zenhanConverter.slash": {
-          "type": "string",
-          "default": "そのまま",
-          "enum": ["そのまま", "全角", "半角"],
-          "description": "フォワードスラッシュ（/）の変換方法"
-        },
-        "zenhanConverter.colon": {
-          "type": "string",
-          "default": "そのまま",
-          "enum": ["そのまま", "全角", "半角"],
-          "description": "コロン（:）の変換方法"
-        },
-        "zenhanConverter.semicolon": {
-          "type": "string",
-          "default": "そのまま",
-          "enum": ["そのまま", "全角", "半角"],
-          "description": "セミコロン（;）の変換方法"
-        },
-        "zenhanConverter.brackets": {
+        "zenhanConverter.03Brackets": {
           "type": "string",
           "default": "そのまま",
           "enum": ["そのまま", "全角", "半角"],
           "description": "カッコ類（（）［］｛｝「」）の変換方法"
         },
-        "zenhanConverter.operators": {
+        "zenhanConverter.04Exclamation": {
+          "type": "string",
+          "default": "そのまま",
+          "enum": ["そのまま", "全角", "半角"],
+          "description": "感嘆符（！）の変換方法"
+        },
+        "zenhanConverter.05Question": {
+          "type": "string",
+          "default": "そのまま",
+          "enum": ["そのまま", "全角", "半角"],
+          "description": "疑問符（？）の変換方法"
+        },
+        "zenhanConverter.06Operators": {
           "type": "string",
           "default": "そのまま",
           "enum": ["そのまま", "全角", "半角"],
           "description": "演算子（＋＝＜＞）の変換方法"
         },
-        "zenhanConverter.at": {
+        "zenhanConverter.07At": {
           "type": "string",
           "default": "そのまま",
           "enum": ["そのまま", "全角", "半角"],
           "description": "アットマーク（@）の変換方法"
         },
-        "zenhanConverter.percent": {
+        "zenhanConverter.08Colon": {
+          "type": "string",
+          "default": "そのまま",
+          "enum": ["そのまま", "全角", "半角"],
+          "description": "コロン（:）の変換方法"
+        },
+        "zenhanConverter.09Semicolon": {
+          "type": "string",
+          "default": "そのまま",
+          "enum": ["そのまま", "全角", "半角"],
+          "description": "セミコロン（;）の変換方法"
+        },
+        "zenhanConverter.10Percent": {
           "type": "string",
           "default": "そのまま",
           "enum": ["そのまま", "全角", "半角"],
           "description": "パーセント（%）の変換方法"
         },
-        "zenhanConverter.ampersand": {
+        "zenhanConverter.11Kuten": {
+          "type": "string",
+          "default": "そのまま",
+          "enum": ["そのまま", "全角", "半角"],
+          "description": "句点（。）・読点（、）の変換方法（半角はJIS X 0201）"
+        },
+        "zenhanConverter.12Space": {
+          "type": "string",
+          "default": "そのまま",
+          "enum": ["そのまま", "全角", "半角"],
+          "description": "スペースの変換方法"
+        },
+        "zenhanConverter.13Yen": {
+          "type": "string",
+          "default": "そのまま",
+          "enum": ["そのまま", "全角", "半角"],
+          "description": "円マーク（￥）の変換方法（全角:U+FFE5 / 半角:U+00A5）"
+        },
+        "zenhanConverter.14Tilde": {
+          "type": "string",
+          "default": "そのまま",
+          "enum": ["そのまま", "全角", "半角"],
+          "description": "チルダ（~）の変換方法"
+        },
+        "zenhanConverter.15Hyphen": {
+          "type": "string",
+          "default": "そのまま",
+          "enum": ["そのまま", "全角", "半角"],
+          "description": "ハイフン（-）の変換方法"
+        },
+        "zenhanConverter.16Underscore": {
+          "type": "string",
+          "default": "そのまま",
+          "enum": ["そのまま", "全角", "半角"],
+          "description": "アンダースコア（_）の変換方法"
+        },
+        "zenhanConverter.17Backslash": {
+          "type": "string",
+          "default": "そのまま",
+          "enum": ["そのまま", "全角", "半角"],
+          "description": "バックスラッシュ（\\）の変換方法（全角:U+FF3C / 半角:U+005C）"
+        },
+        "zenhanConverter.18Slash": {
+          "type": "string",
+          "default": "そのまま",
+          "enum": ["そのまま", "全角", "半角"],
+          "description": "フォワードスラッシュ（/）の変換方法"
+        },
+        "zenhanConverter.19Ampersand": {
           "type": "string",
           "default": "そのまま",
           "enum": ["そのまま", "全角", "半角"],
           "description": "アンパサンド（&）の変換方法"
         },
-        "zenhanConverter.asterisk": {
+        "zenhanConverter.20Asterisk": {
           "type": "string",
           "default": "そのまま",
           "enum": ["そのまま", "全角", "半角"],
           "description": "アスタリスク（*）の変換方法"
         },
-        "zenhanConverter.dollar": {
+        "zenhanConverter.21Dollar": {
           "type": "string",
           "default": "そのまま",
           "enum": ["そのまま", "全角", "半角"],
           "description": "ドル記号（$）の変換方法"
         },
-        "zenhanConverter.hash": {
+        "zenhanConverter.22Hash": {
           "type": "string",
           "default": "そのまま",
           "enum": ["そのまま", "全角", "半角"],
           "description": "シャープ（#）の変換方法"
         },
-        "zenhanConverter.singleQuote": {
+        "zenhanConverter.23SingleQuote": {
           "type": "string",
           "default": "そのまま",
           "enum": ["そのまま", "全角", "半角"],
           "description": "シングルクォーテーション（'）の変換方法"
         },
-        "zenhanConverter.doubleQuote": {
+        "zenhanConverter.24DoubleQuote": {
           "type": "string",
           "default": "そのまま",
           "enum": ["そのまま", "全角", "半角"],
           "description": "ダブルクォーテーション（\"）の変換方法"
         },
-        "zenhanConverter.pipe": {
+        "zenhanConverter.25PeriodComma": {
+          "type": "string",
+          "default": "そのまま",
+          "enum": ["そのまま", "全角", "半角"],
+          "description": "ピリオド（．）・コンマ（，）の変換方法"
+        },
+        "zenhanConverter.26Pipe": {
           "type": "string",
           "default": "そのまま",
           "enum": ["そのまま", "全角", "半角"],
           "description": "パイプ（|）の変換方法"
         },
-        "zenhanConverter.backquote": {
+        "zenhanConverter.27Backquote": {
           "type": "string",
           "default": "そのまま",
           "enum": ["そのまま", "全角", "半角"],
           "description": "バッククォート（`）の変換方法"
         },
-        "zenhanConverter.caret": {
+        "zenhanConverter.28Caret": {
           "type": "string",
           "default": "そのまま",
           "enum": ["そのまま", "全角", "半角"],

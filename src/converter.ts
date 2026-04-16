@@ -1,42 +1,43 @@
 export type ConvertMode = 'そのまま' | '全角' | '半角';
 
 export interface ConvertSettings {
-    alphabet: ConvertMode;
-    number: ConvertMode;
-    space: ConvertMode;
-    exclamation: ConvertMode;
-    question: ConvertMode;
-    kuten: ConvertMode;
-    yen: ConvertMode;
-    tilde: ConvertMode;
-    periodComma: ConvertMode;
-    hyphen: ConvertMode;
-    underscore: ConvertMode;
-    backslash: ConvertMode;
-    slash: ConvertMode;
-    colon: ConvertMode;
-    semicolon: ConvertMode;
-    brackets: ConvertMode;
-    operators: ConvertMode;
-    at: ConvertMode;
-    percent: ConvertMode;
-    ampersand: ConvertMode;
-    asterisk: ConvertMode;
-    dollar: ConvertMode;
-    hash: ConvertMode;
-    singleQuote: ConvertMode;
-    doubleQuote: ConvertMode;
-    pipe: ConvertMode;
-    backquote: ConvertMode;
-    caret: ConvertMode;
+    '01Alphabet': ConvertMode;
+    '02Number': ConvertMode;
+    '03Brackets': ConvertMode;
+    '04Exclamation': ConvertMode;
+    '05Question': ConvertMode;
+    '06Operators': ConvertMode;
+    '07At': ConvertMode;
+    '08Colon': ConvertMode;
+    '09Semicolon': ConvertMode;
+    '10Percent': ConvertMode;
+    '11Kuten': ConvertMode;
+    '12Space': ConvertMode;
+    '13Yen': ConvertMode;
+    '14Tilde': ConvertMode;
+    '15Hyphen': ConvertMode;
+    '16Underscore': ConvertMode;
+    '17Backslash': ConvertMode;
+    '18Slash': ConvertMode;
+    '19Ampersand': ConvertMode;
+    '20Asterisk': ConvertMode;
+    '21Dollar': ConvertMode;
+    '22Hash': ConvertMode;
+    '23SingleQuote': ConvertMode;
+    '24DoubleQuote': ConvertMode;
+    '25PeriodComma': ConvertMode;
+    '26Pipe': ConvertMode;
+    '27Backquote': ConvertMode;
+    '28Caret': ConvertMode;
 }
 
 export const SETTING_KEYS: (keyof ConvertSettings)[] = [
-    'alphabet', 'number', 'space', 'exclamation', 'question', 'kuten',
-    'yen', 'tilde', 'periodComma', 'hyphen', 'underscore', 'backslash',
-    'slash', 'colon', 'semicolon', 'brackets', 'operators', 'at',
-    'percent', 'ampersand', 'asterisk', 'dollar', 'hash', 'singleQuote',
-    'doubleQuote', 'pipe', 'backquote', 'caret'
+    '01Alphabet', '02Number', '03Brackets', '04Exclamation', '05Question',
+    '06Operators', '07At', '08Colon', '09Semicolon', '10Percent',
+    '11Kuten', '12Space', '13Yen', '14Tilde', '15Hyphen',
+    '16Underscore', '17Backslash', '18Slash', '19Ampersand', '20Asterisk',
+    '21Dollar', '22Hash', '23SingleQuote', '24DoubleQuote', '25PeriodComma',
+    '26Pipe', '27Backquote', '28Caret'
 ];
 
 interface CharPair {
@@ -69,76 +70,18 @@ function pair(fullCode: number, halfCode: number): CharPair {
 
 const CHAR_MAPPINGS: CharMapping[] = [
     {
-        settingKey: 'alphabet',
+        settingKey: '01Alphabet',
         pairs: [
             ...range(0xFF21, 0x0041, 26), // Ａ-Ｚ ⇔ A-Z
             ...range(0xFF41, 0x0061, 26), // ａ-ｚ ⇔ a-z
         ],
     },
     {
-        settingKey: 'number',
+        settingKey: '02Number',
         pairs: range(0xFF10, 0x0030, 10), // ０-９ ⇔ 0-9
     },
     {
-        settingKey: 'space',
-        pairs: [pair(0x3000, 0x0020)], // 　 ⇔ (space)
-    },
-    {
-        settingKey: 'exclamation',
-        pairs: [pair(0xFF01, 0x0021)], // ！ ⇔ !
-    },
-    {
-        settingKey: 'question',
-        pairs: [pair(0xFF1F, 0x003F)], // ？ ⇔ ?
-    },
-    {
-        settingKey: 'kuten',
-        pairs: [
-            pair(0x3002, 0xFF61), // 。 ⇔ ｡ (JIS X 0201)
-            pair(0x3001, 0xFF64), // 、 ⇔ ､ (JIS X 0201)
-        ],
-    },
-    {
-        settingKey: 'yen',
-        pairs: [pair(0xFFE5, 0x00A5)], // ￥ ⇔ ¥
-    },
-    {
-        settingKey: 'tilde',
-        pairs: [pair(0xFF5E, 0x007E)], // ～ ⇔ ~
-    },
-    {
-        settingKey: 'periodComma',
-        pairs: [
-            pair(0xFF0E, 0x002E), // ．⇔ .
-            pair(0xFF0C, 0x002C), // ，⇔ ,
-        ],
-    },
-    {
-        settingKey: 'hyphen',
-        pairs: [pair(0xFF0D, 0x002D)], // － ⇔ -
-    },
-    {
-        settingKey: 'underscore',
-        pairs: [pair(0xFF3F, 0x005F)], // ＿ ⇔ _
-    },
-    {
-        settingKey: 'backslash',
-        pairs: [pair(0xFF3C, 0x005C)], // ＼ ⇔ \
-    },
-    {
-        settingKey: 'slash',
-        pairs: [pair(0xFF0F, 0x002F)], // ／ ⇔ /
-    },
-    {
-        settingKey: 'colon',
-        pairs: [pair(0xFF1A, 0x003A)], // ： ⇔ :
-    },
-    {
-        settingKey: 'semicolon',
-        pairs: [pair(0xFF1B, 0x003B)], // ； ⇔ ;
-    },
-    {
-        settingKey: 'brackets',
+        settingKey: '03Brackets',
         pairs: [
             pair(0xFF08, 0x0028), // （ ⇔ (
             pair(0xFF09, 0x0029), // ） ⇔ )
@@ -151,7 +94,15 @@ const CHAR_MAPPINGS: CharMapping[] = [
         ],
     },
     {
-        settingKey: 'operators',
+        settingKey: '04Exclamation',
+        pairs: [pair(0xFF01, 0x0021)], // ！ ⇔ !
+    },
+    {
+        settingKey: '05Question',
+        pairs: [pair(0xFF1F, 0x003F)], // ？ ⇔ ?
+    },
+    {
+        settingKey: '06Operators',
         pairs: [
             pair(0xFF0B, 0x002B), // ＋ ⇔ +
             pair(0xFF1D, 0x003D), // ＝ ⇔ =
@@ -160,47 +111,97 @@ const CHAR_MAPPINGS: CharMapping[] = [
         ],
     },
     {
-        settingKey: 'at',
+        settingKey: '07At',
         pairs: [pair(0xFF20, 0x0040)], // ＠ ⇔ @
     },
     {
-        settingKey: 'percent',
+        settingKey: '08Colon',
+        pairs: [pair(0xFF1A, 0x003A)], // ： ⇔ :
+    },
+    {
+        settingKey: '09Semicolon',
+        pairs: [pair(0xFF1B, 0x003B)], // ； ⇔ ;
+    },
+    {
+        settingKey: '10Percent',
         pairs: [pair(0xFF05, 0x0025)], // ％ ⇔ %
     },
     {
-        settingKey: 'ampersand',
+        settingKey: '11Kuten',
+        pairs: [
+            pair(0x3002, 0xFF61), // 。 ⇔ ｡ (JIS X 0201)
+            pair(0x3001, 0xFF64), // 、 ⇔ ､ (JIS X 0201)
+        ],
+    },
+    {
+        settingKey: '12Space',
+        pairs: [pair(0x3000, 0x0020)], // 　 ⇔ (space)
+    },
+    {
+        settingKey: '13Yen',
+        pairs: [pair(0xFFE5, 0x00A5)], // ￥ ⇔ ¥
+    },
+    {
+        settingKey: '14Tilde',
+        pairs: [pair(0xFF5E, 0x007E)], // ～ ⇔ ~
+    },
+    {
+        settingKey: '15Hyphen',
+        pairs: [pair(0xFF0D, 0x002D)], // － ⇔ -
+    },
+    {
+        settingKey: '16Underscore',
+        pairs: [pair(0xFF3F, 0x005F)], // ＿ ⇔ _
+    },
+    {
+        settingKey: '17Backslash',
+        pairs: [pair(0xFF3C, 0x005C)], // ＼ ⇔ \
+    },
+    {
+        settingKey: '18Slash',
+        pairs: [pair(0xFF0F, 0x002F)], // ／ ⇔ /
+    },
+    {
+        settingKey: '19Ampersand',
         pairs: [pair(0xFF06, 0x0026)], // ＆ ⇔ &
     },
     {
-        settingKey: 'asterisk',
+        settingKey: '20Asterisk',
         pairs: [pair(0xFF0A, 0x002A)], // ＊ ⇔ *
     },
     {
-        settingKey: 'dollar',
+        settingKey: '21Dollar',
         pairs: [pair(0xFF04, 0x0024)], // ＄ ⇔ $
     },
     {
-        settingKey: 'hash',
+        settingKey: '22Hash',
         pairs: [pair(0xFF03, 0x0023)], // ＃ ⇔ #
     },
     {
-        settingKey: 'singleQuote',
+        settingKey: '23SingleQuote',
         pairs: [pair(0xFF07, 0x0027)], // ＇ ⇔ '
     },
     {
-        settingKey: 'doubleQuote',
+        settingKey: '24DoubleQuote',
         pairs: [pair(0xFF02, 0x0022)], // ＂ ⇔ "
     },
     {
-        settingKey: 'pipe',
+        settingKey: '25PeriodComma',
+        pairs: [
+            pair(0xFF0E, 0x002E), // ．⇔ .
+            pair(0xFF0C, 0x002C), // ，⇔ ,
+        ],
+    },
+    {
+        settingKey: '26Pipe',
         pairs: [pair(0xFF5C, 0x007C)], // ｜ ⇔ |
     },
     {
-        settingKey: 'backquote',
+        settingKey: '27Backquote',
         pairs: [pair(0xFF40, 0x0060)], // ｀ ⇔ `
     },
     {
-        settingKey: 'caret',
+        settingKey: '28Caret',
         pairs: [pair(0xFF3E, 0x005E)], // ＾ ⇔ ^
     },
 ];

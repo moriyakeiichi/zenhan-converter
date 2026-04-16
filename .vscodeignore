@@ -7,4 +7,7 @@ tsconfig.json
 **/*.ts
 **/*.map
 仕様.txt
+仕様2.txt
+設定項目順序.txt
+test_sample.txt
 *.vsix
